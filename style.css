@@ -1,0 +1,45 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.ktg {
+  color: white;
+}
+.card-header{
+  background-color: #151B54;
+  color: white;
+}
+nav {
+  background-color: #151B54;
+}
+footer {
+  background-color: #151B54;
+}
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.blogimg {
+  height: 300px;
+  width: 500px;
+}
+
+.blogimg2 {
+  height: 400px;
+  width: 900px;
+}
