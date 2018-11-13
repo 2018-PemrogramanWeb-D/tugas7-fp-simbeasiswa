@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,23 +67,23 @@
     </nav>
 
     <div class="text-center row justify-content-center">    	
-    <form method="post" action="">
+    <form method="POST" enctype="multipart/form-data" action="upload.php">
 	    <br><h2>Upload File</h2><br>    	
 	    <div class="form-group">
-	      	<input type="text" class="form-control form-control-lg" id="nama" placeholder="Nama">
+	      	<input type="text" class="form-control form-control-lg" id="nama" placeholder="Nama" required>
 		</div>
 		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="instansi" placeholder="Asal Instansi">
+	    	<input type="text" class="form-control form-control-lg" id="instansi" placeholder="Asal Instansi" required>
 		</div>
 		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="noktp" placeholder="Nomor KTP">
+	    	<input type="text" class="form-control form-control-lg" id="noktp" placeholder="Nomor KTP" required>
 		</div>
 		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="notlp" placeholder="Nomor Telepon">
+	    	<input type="text" class="form-control form-control-lg" id="notlp" placeholder="Nomor Telepon" required>
 		</div>
 		<div class="form-group">
 			<div class="custom-file">
-	  			<input type="file" class="custom-file-input" id="uploadfile">
+	  			<input type="file" class="custom-file-input" id="uploadfile" name="uploadfile" required />
 	  			<label class="custom-file-label" for="uploadfile">Pilih File</label>
    			</div>
    		</div>
