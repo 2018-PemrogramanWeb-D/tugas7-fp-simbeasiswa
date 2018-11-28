@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@ session_start();
   </head>
 
   <body>
-    <?php require 'upload.php'?>
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">SIM Beasiswa</a>
@@ -25,7 +26,7 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="about.html">Home</a>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Beasiswa
@@ -50,7 +51,24 @@ session_start();
                 Other
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="ADMIN.html">Login Admin</a>
+
+                
+                <?php
+                  if (!empty($_SESSION["valid"]))
+                  
+                  {
+                      
+
+                      ECHO '<a class="dropdown-item" href="logout.php">Logout Admin</a>';
+                      
+                  }
+                  
+                  else
+                  
+                  {
+                      ECHO '<a class="dropdown-item" href="login.php">Login Admin</a>';
+                  }
+                  ?>
                 <a class="dropdown-item" href="#.html">Sistem Informasi</a>
                 <a class="dropdown-item" href="UPLOAD.html">Upload</a>
               </div>
@@ -65,33 +83,26 @@ session_start();
         </div>
       </div>
     </nav>
+  
 
-    <div class="text-center row justify-content-center">    	
-    <form method="POST" enctype="multipart/form-data" action="upload.php">
-	    <br><h2>Upload File</h2><br> 
 
+  <div class="text-center row justify-content-center">    	
+    <form method="POST" action="login.php">
+	    <br><h2>Login</h2><br>    	
 	    <div class="form-group">
-	      	<input type="text" class="form-control form-control-lg" id="nama" placeholder="Nama" required>
+	      	<input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Username" required>
 		</div>
 		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="instansi" placeholder="Asal Instansi" required>
+	    	<input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Password" required>
 		</div>
 		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="noktp" placeholder="Nomor KTP" required>
+	    	<input type="submit" class="btn btn-info btn-lg btn-block" name="login">
 		</div>
-		<div class="form-group">
-	    	<input type="text" class="form-control form-control-lg" id="notlp" placeholder="Nomor Telepon" required>
-		</div>
-		<div class="form-group">
-			<div class="custom-file">
-	  			<input type="file" class="custom-file-input" id="uploadfile" name="uploadfile" required />
-	  			<label class="custom-file-label" for="uploadfile">Pilih File</label>
-   			</div>
-   		</div>
-		<div class="form-group">
-	    	<input type="submit" class="btn btn-info btn-lg btn-block" value="Upload">
-		</div>
-	</form>   
+		<input type="checkbox" id="remember_me" name="_remember_me">
+		<label for="remember_me">Remember me</label>
+	</form>
+			
+        
    </div>
 </div>
 
