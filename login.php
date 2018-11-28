@@ -1,4 +1,12 @@
-<?php
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+	<body>
+	<?php
    	include("database.php");
    	session_start();
    
@@ -19,14 +27,14 @@
     if ($_POST["username"]=="admin" && $_POST['password']=="1234") 
     {
         $_SESSION["valid"] = true;
-        $_SESSION["timeout"] = time();
-        $_SESSION["username"]="admin";
-        header("location: index.html");
+        header("location: index.php");
     }
     else 
     {
         echo "Username or Password is incorrect";
-        header("location: ADMIN.html");
+        header("location: ADMIN.php");
     }
             
 ?>
+	</body>
+</html>
