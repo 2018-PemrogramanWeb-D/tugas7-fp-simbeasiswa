@@ -17,10 +17,6 @@ Route::get('/', function () {
 Route::post('/message','MessageController@postmessage');
 Route::get('/viewmessage','MessageController@viewmessage');
 
-// Route::get('/blog', function () {
-// 	return view('blog');
-// });
-
 Route::post('/register1','LoginController@postregister');
 Route::post('/login1','LoginController@postuser');
 
@@ -48,6 +44,24 @@ Route::get('/sisteminformasi', function() {
 });
 
 Route::post('/search','FileController@search');
+
+
+Route::get('/alumni', function() {
+	return view('alumni');
+});
+Route::get('/institusi', function() {
+	return view('institusi');
+});
+Route::get('/non-institusi', function() {
+	return view('non');
+});
+Route::get('/pasca-sarjana', function() {
+	return view('pasca');
+});
+Route::get('/luar-negeri', function() {
+	return view('luar');
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post/{id}','HomeController@postid');

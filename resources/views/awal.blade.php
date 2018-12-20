@@ -161,11 +161,11 @@
                 <div class="card-body">
                     <div class="col mb-4" style="margin-right:  100px">
                         <ul class="list-group" style="text-align: center;">
-                            <li class="list-group-item"><a href="#">Alumni ITS</a></li>
-                            <li class="list-group-item"><a href="#">Institusi</a> </li> 
-                            <li class="list-group-item"><a href="#">Non Institusi</a> </li> 
-                            <li class="list-group-item"><a href="#">Pasca Sarjana</a> </li>
-                            <li class="list-group-item"><a href="#">Luar Negeri</a> </span></li>
+                            <li class="list-group-item"><a href="/alumni">Alumni ITS</a></li>
+                            <li class="list-group-item"><a href="/institusi">Institusi</a> </li> 
+                            <li class="list-group-item"><a href="/non-institusi">Non Institusi</a> </li> 
+                            <li class="list-group-item"><a href="/pasca-sarjana">Pasca Sarjana</a> </li>
+                            <li class="list-group-item"><a href="/luar-negeri">Luar Negeri</a> </span></li>
                         </ul>
                     </div>
                 </div>

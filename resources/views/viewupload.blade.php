@@ -5,11 +5,6 @@
     <title>SIM Beasiswa - Sistem Informasi</title>
 </head>
 
-@if(Auth::guest())
-	<h4>Mohon Maaf</h4>
-	<h1>Hanya Admin yang Dapat Melihat</h1>
-	<h5>Jika Anda Admin, Silakan Log In untuk Membuka Halaman Ini</h5>
-@else
 	<h1>Upload</h1>
 	<div class="table-responsive">
         <table class="table table-bordered">
@@ -39,6 +34,6 @@
                 </tbody>
         </table>
     </div>
-@endif
+
 
 @endsection

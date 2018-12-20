@@ -28,11 +28,11 @@
                 Beasiswa
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="#">Alumni ITS</a>
-                <a class="dropdown-item" href="#">Institusi</a>
-                <a class="dropdown-item" href="#">Non Institusi</a>
-                <a class="dropdown-item" href="#">Pasca Sarjana</a>
-                <a class="dropdown-item" href="#">Luar Negeri</a>
+                <a class="dropdown-item" href="/alumni">Alumni ITS</a>
+                <a class="dropdown-item" href="/institusi">Institusi</a>
+                <a class="dropdown-item" href="/non-institusi">Non Institusi</a>
+                <a class="dropdown-item" href="/pasca-sarjana">Pasca Sarjana</a>
+                <a class="dropdown-item" href="/luar-negeri">Luar Negeri</a>
               </div>
             </li>
             </li>
@@ -51,8 +51,9 @@
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                   </form>
+                  <a class="dropdown-item" href="/viewmessage">View Message</a>
+                  <a class="dropdown-item" href="{{url ('/sisteminformasi')}}">Sistem Informasi</a>
                 @endif
-                <a class="dropdown-item" href="{{url ('/sisteminformasi')}}">Sistem Informasi</a>
                 <a class="dropdown-item" href="{{url ('/upload')}}">Upload</a>
               </div>
             </li>
