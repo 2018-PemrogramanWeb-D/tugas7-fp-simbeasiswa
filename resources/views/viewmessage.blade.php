@@ -1,0 +1,20 @@
+<table>
+	<thead>
+		<th>Id</th>
+		<th>Nama</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Message</th>
+	</thead>
+	<tbody>
+		@foreach($msg as $x)
+			<tr>
+				<td>{{$x->id}}</td>
+				<td><{{$x->name}}/td>
+				<td>{{$x->email}}</td>
+				<td>{{$x->phone}}</td>
+				<td>{{$x->message}}</td>
+			</tr>
+		@endforeach
+	</tbody>
+</table>
