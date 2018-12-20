@@ -32,6 +32,7 @@ class FileController extends Controller
     public function search(Request $r)
     {
         $post=DB::table('post')->where('judul','like','%'.$r->kata.'%')->orWhere('deskripsi','like','%'.$r->kata.'%')->orWhere('fasilitas','like','%'.$r->kata.'%')->orWhere('syarat','like','%'.$r->kata.'%')->get();
-        return $post;
+
+        return view('search',compact('post'));
     }
 }

@@ -22,7 +22,7 @@
 
         <div class="col-lg-8">
 
-          <img class="img-fluid rounded blogimg2" src="images/example/ex1.jpg" alt="">
+          {{-- <img class="img-fluid rounded blogimg2" src="images/example/ex1.jpg" alt=""> --}}
 
           <hr>
 
@@ -139,10 +139,11 @@
             <h5 class="card-header">Cari</h5>
             <div class="card-body">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
+                <form class="form-inline" action="{{url('/search')}}" method="POST">
+                  {{csrf_field()}}
+                  <input class="form-control mr-sm-2" type="text" placeholder="Cari Beasiswa" name="kata">
+                  <button class="btn btn-success" type="submit">GO</button>
+                </form>
               </div>
             </div>
           </div>

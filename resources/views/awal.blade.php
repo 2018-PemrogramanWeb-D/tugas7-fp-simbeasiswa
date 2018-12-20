@@ -55,10 +55,11 @@
                 <h5 class="card-header">Cari</h5>
                 <div class="card-body">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari Beasiswa">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="button">Go!</button>
-                        </span>
+                       <form class="form-inline" action="{{url('/search')}}" method="POST">
+                            {{csrf_field()}}
+                            <input class="form-control mr-sm-2" type="text" placeholder="Cari Beasiswa" name="kata">
+                            <button class="btn btn-success" type="submit">GO</button>
+                        </form>
                         <br>
                     </div>
                     <div class="col-lg-36" style="margin: 20px">
